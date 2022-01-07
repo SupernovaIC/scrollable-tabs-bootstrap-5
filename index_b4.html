@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrollable Tabs Bootstrap 4</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+    
+    <style>
+        .wrapper-nav {
+            position:relative;
+            margin:0 auto;
+            overflow:hidden;
+            padding:5px;
+            height:50px;
+        }
+
+        .list {
+            position:absolute;
+            left:0px;
+            top:0px;
+            min-width:3500px;
+            margin-top:0px;
+        }
+
+        .list li{
+            display:table-cell;
+            position:relative;
+            text-align:center;
+            cursor:grab;
+            cursor:-webkit-grab;
+            color:#efefef;
+            vertical-align:middle;
+        }
+
+        .scroller {
+        text-align:center;
+        cursor:pointer;
+        display:none;
+        padding:7px;
+        padding-top:13px;
+        white-space:no-wrap;
+        vertical-align:middle;
+        background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-100 pt-3">
+        <div class="scroller scroller-left float-left mt-2"><i class="fa fa-chevron-left"></i></div>
+        <div class="scroller scroller-right float-right mt-2"><i class="fa fa-chevron-right"></i></div>
+        <div class="wrapper-nav">
+            <nav class="nav nav-tabs list mt-2" id="myTab" role="tablist">
+                <a class="nav-item nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="public" aria-expanded="true">Tab1</a>
+                <a class="nav-item nav-link" href="#tab2" role="tab" data-toggle="tab">Tab 2</a>
+                <a class="nav-item nav-link" href="#tab3" role="tab" data-toggle="tab">Tab 3</a>
+                <a class="nav-item nav-link" href="#tab4" role="tab" data-toggle="tab">Tab 4</a>
+                <a class="nav-item nav-link" href="#tab5" role="tab" data-toggle="tab">Tab 5</a>
+                <a class="nav-item nav-link" href="#tab6" role="tab" data-toggle="tab">Tab 6</a>
+                <a class="nav-item nav-link" href="#tab7" role="tab" data-toggle="tab">Tab 7</a>
+                <a class="nav-item nav-link" href="#tab8" role="tab" data-toggle="tab">Tab 8</a>
+                <a class="nav-item nav-link" href="#tab9" role="tab" data-toggle="tab">Tab 9</a>
+                <a class="nav-item nav-link" href="#tab10" role="tab" data-toggle="tab">Tab 10</a>
+                <a class="nav-item nav-link" href="#tab11" role="tab" data-toggle="tab">Tab 11</a>
+                <a class="nav-item nav-link" href="#tab12" role="tab" data-toggle="tab">Tab 12</a>
+                <a class="nav-item nav-link" href="#tab13" role="tab" data-toggle="tab">Tab 13</a>
+                <a class="nav-item nav-link" href="#tab14" role="tab" data-toggle="tab">Tab 14</a>
+                <a class="nav-item nav-link" href="#tab15" role="tab" data-toggle="tab">Tab 15</a>
+                <a class="nav-item nav-link" href="#tab16" role="tab" data-toggle="tab">Tab 16</a>
+            </nav>
+        </div>
+        <div class="tab-content p-3" id="myTabContent">
+            <div role="tabpanel" class="tab-pane fade active show mt-2" id="tab1" aria-labelledby="public-tab" aria-expanded="true">
+                This is the content of Tab 1...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab2" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 2...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab3" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 3...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab4" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 4...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab5" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 5...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab6" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 6...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab7" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 7...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab8" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 8...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab9" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 9...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab10" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 10...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab11" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 11...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab12" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 12...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab13" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 13...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab14" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 14...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab15" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 15...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab16" role="tabpanel" aria-labelledby="group-dropdown2-tab" aria-expanded="false">
+                This is the content of Tab 16...
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var hidWidth;
+        var scrollBarWidths = 40;
+
+        var widthOfList = function() {
+            var itemsWidth = 0;
+            $('.list a').each(function() {
+                var itemWidth = $(this).outerWidth();
+                itemsWidth += itemWidth;
+            });
+            return itemsWidth;
+        };
+
+        var widthOfHidden = function(){
+            var ww = 0 - $('.wrapper-nav').outerWidth();
+
+            var hw = (($('.wrapper-nav').outerWidth()) - widthOfList() - getLeftPosi()) - scrollBarWidths;
+
+            var rp = $(document).width() - ($('.nav-item.nav-link').last().offset().left + $('.nav-item.nav-link').last().outerWidth());
+
+            if (ww > hw) {
+                //return ww;
+                return (rp > ww ? rp : ww);
+            }
+            else {
+                //return hw;
+                return (rp > hw ? rp : hw);
+            }
+        };
+
+        var getLeftPosi = function(){
+            
+            var ww = 0 - $('.wrapper-nav').outerWidth();
+            var lp = $('.list').position().left;
+            
+            if (ww > lp) {
+                return ww;
+            }
+            else {
+                return lp;
+            }
+        };
+
+        var reAdjust = function(){
+            // check right pos of last nav item
+            var rp = $(document).width() - ($('.nav-item.nav-link').last().offset().left + $('.nav-item.nav-link').last().outerWidth());
+  
+            if (($('.wrapper-nav').outerWidth()) < widthOfList() && (rp < 0)) {
+                $('.scroller-right').show().css('display', 'flex');
+            }
+            else {
+                $('.scroller-right').hide();
+            }
+            
+            if (getLeftPosi() < 0) {
+                $('.scroller-left').show().css('display', 'flex');
+            }
+            else {
+                $('.scroller-left').hide();
+            }
+        }
+
+        reAdjust();
+
+        $(window).on('resize',function(e){
+            reAdjust();
+        });
+
+        $('.scroller-right').click(function() {
+            $('.scroller-left').fadeIn('slow');
+            $('.scroller-right').fadeOut('slow');
+
+            $('.list').animate({ left: `+=${widthOfHidden()}px` }, 'slow', function() {
+                reAdjust();
+            });
+        });
+
+        $('.scroller-left').click(function() {
+        
+            $('.scroller-right').fadeIn('slow');
+            $('.scroller-left').fadeOut('slow');
+
+            $('.list').animate({ left: `-=${getLeftPosi()}px` }, 'slow', function() {
+                reAdjust();
+            });
+        });
+    </script>
+</body>
+</html>
+
