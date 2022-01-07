@@ -1,4 +1,5 @@
-# scrollable-tabs-bootstrat-5
+# Scrollable Tabs for Bootstrat 5
+
 A simple plugin to create scrollable tabs with Bootstrap 5.
 
 [![preview][1]][1]
