@@ -1,4 +1,4 @@
-var move = require('move');
+let move = require('move');
 
 const scrollBarWidths = 40;
 const wrapper = document.getElementsByClassName("wrapper-nav")[0];
@@ -9,6 +9,8 @@ const scrollerRight = document.getElementsByClassName("scroller-right")[0];
 const scrollerLeft = document.getElementsByClassName("scroller-left")[0];
 
 const list = document.querySelectorAll(".list");
+
+let btnTriggered = false;
 
 let widthOfList = function() {
     let itemsWidth = 0;
@@ -74,6 +76,8 @@ let reAdjust = function() {
   else {
     scrollerLeft.style.display = 'none';
   }
+
+  btnTriggered = false;
 }
 
 window.addEventListener('resize', function(event) {
@@ -81,6 +85,10 @@ window.addEventListener('resize', function(event) {
 }, true);
 
 scrollerRight.addEventListener("click", function() {
+    if (btnTriggered) return;
+
+    btnTriggered = true;
+
     fade(scrollerLeft);
     unfade(scrollerRight);
 
@@ -92,12 +100,16 @@ scrollerRight.addEventListener("click", function() {
 });
 
 scrollerLeft.addEventListener("click", function() {
+    if (btnTriggered) return;
+
+    btnTriggered = true;
+
     fade(scrollerRight);
     unfade(scrollerLeft);
 
     let wL = getOuterWidth(scrollerLeft);
 
-    move(document.querySelectorAll(".list")[0]).add("left", -getLeftPosi() + wL, 200).end().then(x=> {
+    move(document.querySelectorAll(".list")[0]).add("left", -getLeftPosi() + wL, 200).end().then(()=> {
         reAdjust();
     });
 });
