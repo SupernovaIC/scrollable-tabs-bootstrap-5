@@ -13,7 +13,7 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 
 <!--External library-->
-<script src="move.min.js"></script>
+<script src="https://raw.githubusercontent.com/SupernovaIC/scrollable-tabs-bootstrap-5/main/move.min.js"></script>
 <!--https://visionmedia.github.io/move.js/-->
 
 <!--Scrollable libs-->
