@@ -8,7 +8,7 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 
 ### Install:
 
-[Download the latest release](https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5/archive/refs/tags/v1.0.0.1.zip)
+- [Download the latest release](https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5/archive/refs/tags/v1.0.0.1.zip)
 
 - Install with [npm](https://www.npmjs.com/): `npm i scrolling-tabs-bootstrap-5`
 
