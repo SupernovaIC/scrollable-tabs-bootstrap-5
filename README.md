@@ -6,19 +6,27 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 
 ## Usage:
 
+### Install:
+
+[Download the latest release](https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5/archive/refs/tags/v1.0.0.1.zip)
+
+- Install with [npm](https://www.npmjs.com/): `npm i scrolling-tabs-bootstrap-5`
+
+[![npm version](https://img.shields.io/npm/v/scrolling-tabs-bootstrap-5)](https://www.npmjs.com/package/scrolling-tabs-bootstrap-5)
+
 ### Required libraries:
 
 ```html
 <!--Bootstrap icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="node_modules/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 
 <!--External library-->
-<script src="https://raw.githubusercontent.com/SupernovaIC/scrollable-tabs-bootstrap-5/main/move.min.js"></script>
+<script src="node_modules/scrollable-tabs-bootstrap-5/dist/move.min.js"></script>
 <!--https://visionmedia.github.io/move.js/-->
 
 <!--Scrollable libs-->
-<link href="scrollable-tabs.css" rel="stylesheet">
-<script src="scrollable-tabs.js"></script>
+<link href="node_modules/scrollable-tabs-bootstrap-5/dist/scrollable-tabs.css" rel="stylesheet">
+<script src="node_modules/scrollable-tabs-bootstrap-5/dist/scrollable-tabs.js"></script>
 ```
 
 ### HTML example:

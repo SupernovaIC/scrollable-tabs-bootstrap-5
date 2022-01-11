@@ -1,0 +1,35 @@
+{
+  "name": "scrolling-tabs-bootstrap-5",
+  "version": "1.0.1",
+  "description": "A simple plugin to create scrollable tabs with Bootstrap 5.",
+  "main": "./dist/scrollable-tabs.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5.git"
+  },
+  "keywords": [
+    "scrollable",
+    "scrolling",
+    "tabs",
+    "bootstrap",
+    "boostrap",
+    "5",
+    "bootstrap5",
+    "javascript",
+    "css"
+  ],
+  "ignore": [
+    ".gitignore",
+    "README.md"
+  ],
+  "author": "Federico Navarrete <fanmixco@gmail.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5/issues"
+  },
+  "homepage": "https://github.com/SupernovaIC/scrollable-tabs-bootstrap-5#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.2"
+  }
+}
