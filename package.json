@@ -1,6 +1,6 @@
 {
   "name": "scrolling-tabs-bootstrap-5",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A simple plugin to create scrollable tabs with Bootstrap 5.",
   "main": "./dist/scrollable-tabs.js",
   "repository": {
