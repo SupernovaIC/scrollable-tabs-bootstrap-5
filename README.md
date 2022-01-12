@@ -6,7 +6,7 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 
 ## Support me:
 
-[![sponsor me](2)](https://www.buymeacoffee.com/fanmixco)
+[![sponsor me][2]](https://www.buymeacoffee.com/fanmixco)
 
 ## Usage:
 
