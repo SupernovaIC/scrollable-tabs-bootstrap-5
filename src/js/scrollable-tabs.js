@@ -1,4 +1,4 @@
-let move = require('move');
+//let move = require('move');
 
 const scrollBarWidths = 40;
 const wrapper = document.getElementsByClassName("wrapper-nav")[0];

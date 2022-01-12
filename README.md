@@ -4,6 +4,10 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 
 [![preview][1]][1]
 
+## Support me:
+
+[![coffee][2]][2]
+
 ## Usage:
 
 ### Install:
@@ -73,3 +77,4 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 https://www.codeply.com/go/Loo3CqsA7T
 
   [1]: preview.gif
+  [2]: https://raw.githubusercontent.com/FANMixco/Xamarin-SearchBar/master/bmc-rezr5vpd.gif
