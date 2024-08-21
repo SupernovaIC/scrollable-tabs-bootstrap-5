@@ -1,4 +1,7 @@
-.github
+.github/
 src/
 preview.gif
 README.md
+example/index_b4.html
+.gitignore
+node_modules/
