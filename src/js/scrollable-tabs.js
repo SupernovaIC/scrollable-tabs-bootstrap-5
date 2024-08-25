@@ -1,137 +1,120 @@
 //let move = require('move');
+// Function to initialize scrollable tabs for a specific wrapper
+function initializeScrollableTabs(wrapper) {
+    const scrollBarWidths = 40;
+    const scrollerRight = wrapper.querySelector(".scroller-right");
+    const scrollerLeft = wrapper.querySelector(".scroller-left");
+    const list = wrapper.querySelector(".list");
+    const lastNavLink = list.querySelectorAll(".nav-item.nav-link")[list.querySelectorAll(".nav-item.nav-link").length - 1];
+    let btnTriggered = false;
 
-const scrollBarWidths = 40;
-const wrapper = document.getElementsByClassName("wrapper-nav")[0];
-const navLink = document.getElementsByClassName("nav-item nav-link");
-const lastNavLink = navLink[navLink.length - 1];
+    let widthOfList = function () {
+        let itemsWidth = 0;
+        const listLinks = list.querySelectorAll("a");
 
-const scrollerRight = document.getElementsByClassName("scroller-right")[0];
-const scrollerLeft = document.getElementsByClassName("scroller-left")[0];
+        listLinks.forEach((el) => {
+            let itemWidth = getOuterWidth(el);
+            itemsWidth += itemWidth;
+        });
 
-const list = document.querySelectorAll(".list");
+        return itemsWidth;
+    };
 
-let btnTriggered = false;
+    let widthOfHidden = function (w) {
+        w = (!w) ? 0 : w;
+        const oW = getOuterWidth(wrapper.querySelector(".wrapper-nav")) - w;
+        const ww = parseFloat((0 - oW).toFixed(3));
+        const hw = (oW - widthOfList() - getLeftPosi()) - scrollBarWidths;
+        const rp = document.body.clientWidth - (getOuterLeft(lastNavLink) + getOuterWidth(lastNavLink)) - w;
 
-let widthOfList = function() {
-    let itemsWidth = 0;
-  
-    const listLinks = document.querySelectorAll(".list a");
-  
-    listLinks.forEach((el) => { 
-      let itemWidth = getOuterWidth(el);
-      itemsWidth += itemWidth;
+        if (ww > hw) {
+            return (rp > ww ? rp : ww);
+        } else {
+            return (rp > hw ? rp : hw);
+        }
+    };
+
+    let getLeftPosi = () => {
+        const lp = getOuterLeft(list);
+        const wrapperLeft = getOuterLeft(wrapper.querySelector(".wrapper-nav"));
+        
+        return lp - wrapperLeft;
+    };
+
+    let reAdjust = () => {
+        let rp = document.body.clientWidth - (getOuterLeft(lastNavLink) + getOuterWidth(lastNavLink));
+
+        if (getOuterWidth(wrapper.querySelector(".wrapper-nav")) < widthOfList() && (rp < 0)) {
+            scrollerRight.style.display = 'flex';
+            unfade(scrollerRight);
+        } else {
+            scrollerRight.style.display = 'none';
+        }
+
+        if (getLeftPosi() < 0) {
+            scrollerLeft.style.display = 'flex';
+            unfade(scrollerLeft);
+        } else {
+            scrollerLeft.style.display = 'none';
+        }
+
+        btnTriggered = false;
+    };
+
+    scrollerRight.addEventListener("click", () => {
+        if (btnTriggered) return;
+
+        btnTriggered = true;
+
+        fade(scrollerLeft);
+        unfade(scrollerRight);
+
+        let wR = getOuterWidth(scrollerRight);
+
+        move(list).add("left", +widthOfHidden(wR), 200).end().then(() => {
+            reAdjust();
+        });
     });
-  
-    return itemsWidth;
-};
-  
-let widthOfHidden = function(w) {
-    const wrapperh = document.getElementsByClassName("wrapper-nav")[0];
 
-    w = (!w) ? 0 : w;
+    scrollerLeft.addEventListener("click", () => {
+        if (btnTriggered) return;
 
-    oW = getOuterWidth(wrapperh) - w;
+        btnTriggered = true;
 
-    let ww = parseFloat((0 - oW).toFixed(3));
+        fade(scrollerRight);
+        unfade(scrollerLeft);
 
-    let hw = (oW - widthOfList() - getLeftPosi()) - scrollBarWidths;
+        let wL = getOuterWidth(scrollerLeft);
 
-    let rp = document.body.clientWidth - (getOuterLeft(lastNavLink) + getOuterWidth(lastNavLink)) - w;
-    
-    if (ww > hw) {
-        //return ww;
-        return (rp > ww ? rp : ww);
-    }
-    else {
-        //return hw;
-        return (rp > hw ? rp : hw);
-    }
-};
+        move(list).add("left", -getLeftPosi() + wL, 200).end().then(() => {
+            reAdjust();
+        });
+    });
 
-let getLeftPosi = function() {
-    let ww = 0 - getOuterWidth(wrapper);
-    let lp = getOuterLeft(list[0]);
+    window.addEventListener('resize', () => {
+        reAdjust();
+    }, true);
 
-    if (ww > lp) {
-        return ww;
-    }
-    else {
-        return lp;
-    }
-};
-
-let reAdjust = function() {
-  let rp = document.body.clientWidth - (getOuterLeft(lastNavLink) + getOuterWidth(lastNavLink));
-
-  if (getOuterWidth(wrapper) < widthOfList() && (rp < 0)) {
-    scrollerRight.style.cssText = 'display: flex';
-  }
-  else {
-    scrollerRight.style.display = 'none';
-  }
-
-  if (getLeftPosi() < 0) {
-    scrollerLeft.style.cssText = 'display: flex';
-  }
-  else {
-    scrollerLeft.style.display = 'none';
-  }
-
-  btnTriggered = false;
-}
-
-window.addEventListener('resize', function(event) {
     reAdjust();
-}, true);
-
-scrollerRight.addEventListener("click", function() {
-    if (btnTriggered) return;
-
-    btnTriggered = true;
-
-    fade(scrollerLeft);
-    unfade(scrollerRight);
-
-    let wR = getOuterWidth(scrollerRight);
-
-    move(document.querySelectorAll(".list")[0]).add("left", +widthOfHidden(wR), 200).end().then(x=> {
-        reAdjust();
-    });
-});
-
-scrollerLeft.addEventListener("click", function() {
-    if (btnTriggered) return;
-
-    btnTriggered = true;
-
-    fade(scrollerRight);
-    unfade(scrollerLeft);
-
-    let wL = getOuterWidth(scrollerLeft);
-
-    move(document.querySelectorAll(".list")[0]).add("left", -getLeftPosi() + wL, 200).end().then(()=> {
-        reAdjust();
-    });
-});
-
-let getOuterLeft = function(elem) {
-    return elem.getBoundingClientRect().left;
 }
 
-let getOuterWidth = function(elem) {
-    return parseFloat(window.getComputedStyle(elem).width);
-}
+let getOuterLeft = (elem) => elem.getBoundingClientRect().left;
+
+let getOuterWidth = (elem) => parseFloat(window.getComputedStyle(elem).width);
 
 function fade(elem) {
     elem.style.display = "none";
-    elem.style.transition="opacity 0.6s";
-    elem.style.opacity=0;
+    elem.style.transition = "opacity 0.6s";
+    elem.style.opacity = 0;
 }
 
 function unfade(elem) {
     elem.style.display = "block";
-    elem.style.transition="opacity 0.6s";
-    elem.style.opacity=1;
+    elem.style.transition = "opacity 0.6s";
+    elem.style.opacity = 1;
 }
 
-reAdjust();
+// Initialize scrollable tabs for each tab set
+document.querySelectorAll('.tab-wrapper').forEach(wrapper => {
+    initializeScrollableTabs(wrapper);
+});

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Scrollable tab for Bootstrap 5">
@@ -7,18 +8,23 @@
     <meta name="author" content="Federico Navarrete">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scrollable Tabs Bootstrap 5</title>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
+
 <body>
-    <div class="w-100 pt-3">
+    <div class="tab-wrapper w-100 pt-3">
         <div class="scroller scroller-left float-start mt-2"><i class="bi bi-caret-left-fill"></i></div>
         <div class="scroller scroller-right float-end mt-2"><i class="bi bi-caret-right-fill"></i></div>
         <div class="wrapper-nav">
             <nav class="nav nav-tabs list mt-2" id="myTab" role="tablist">
-                <a class="nav-item nav-link pointer active" data-bs-toggle="tab" data-bs-target="#tab1" role="tab" aria-controls="public" aria-selected="true">Tab1</a>
+                <a class="nav-item nav-link pointer active" data-bs-toggle="tab" data-bs-target="#tab1" role="tab"
+                    aria-controls="public" aria-selected="true">Tab1</a>
                 <a class="nav-item nav-link pointer" data-bs-target="#tab2" role="tab" data-bs-toggle="tab">Tab 2</a>
                 <a class="nav-item nav-link pointer" data-bs-target="#tab3" role="tab" data-bs-toggle="tab">Tab 3</a>
                 <a class="nav-item nav-link pointer" data-bs-target="#tab4" role="tab" data-bs-toggle="tab">Tab 4</a>
@@ -37,60 +43,109 @@
             </nav>
         </div>
         <div class="tab-content p-3" id="myTabContent">
-            <div role="tabpanel" class="tab-pane fade active show mt-2" id="tab1" aria-labelledby="public-tab" >
+            <div role="tabpanel" class="tab-pane fade active show mt-2" id="tab1" aria-labelledby="public-tab">
                 This is the content of Tab 1...
             </div>
-            <div class="tab-pane fade mt-2" id="tab2" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab2" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 2...
             </div>
-            <div class="tab-pane fade mt-2" id="tab3" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab3" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 3...
             </div>
-            <div class="tab-pane fade mt-2" id="tab4" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab4" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 4...
             </div>
-            <div class="tab-pane fade mt-2" id="tab5" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab5" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 5...
             </div>
-            <div class="tab-pane fade mt-2" id="tab6" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab6" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 6...
             </div>
-            <div class="tab-pane fade mt-2" id="tab7" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab7" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 7...
             </div>
-            <div class="tab-pane fade mt-2" id="tab8" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab8" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 8...
             </div>
-            <div class="tab-pane fade mt-2" id="tab9" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab9" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 9...
             </div>
-            <div class="tab-pane fade mt-2" id="tab10" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab10" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 10...
             </div>
-            <div class="tab-pane fade mt-2" id="tab11" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab11" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 11...
             </div>
-            <div class="tab-pane fade mt-2" id="tab12" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab12" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 12...
             </div>
-            <div class="tab-pane fade mt-2" id="tab13" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab13" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 13...
             </div>
-            <div class="tab-pane fade mt-2" id="tab14" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab14" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 14...
             </div>
-            <div class="tab-pane fade mt-2" id="tab15" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab15" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 15...
             </div>
-            <div class="tab-pane fade mt-2" id="tab16" role="tabpanel" aria-labelledby="group-dropdown2-tab" >
+            <div class="tab-pane fade mt-2" id="tab16" role="tabpanel" aria-labelledby="group-dropdown2-tab">
                 This is the content of Tab 16...
             </div>
 
         </div>
     </div>
 
+    <div class="tab-wrapper w-100 pt-3">
+        <div class="scroller scroller-left float-start mt-2"><i class="bi bi-caret-left-fill"></i></div>
+        <div class="scroller scroller-right float-end mt-2"><i class="bi bi-caret-right-fill"></i></div>
+        <div class="wrapper-nav">
+            <nav class="nav nav-tabs list mt-2" id="myTab2" role="tablist">
+                <a class="nav-item nav-link pointer active" data-bs-toggle="tab" data-bs-target="#tab17" role="tab"
+                    aria-controls="public" aria-selected="true">Tab17</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab18" role="tab" data-bs-toggle="tab">Tab 18</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab19" role="tab" data-bs-toggle="tab">Tab 19</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab20" role="tab" data-bs-toggle="tab">Tab 20</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab21" role="tab" data-bs-toggle="tab">Tab 21</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#ta22" role="tab" data-bs-toggle="tab">Tab 22</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab23" role="tab" data-bs-toggle="tab">Tab 23</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab24" role="tab" data-bs-toggle="tab">Tab 24</a>
+                <a class="nav-item nav-link pointer" data-bs-target="#tab25" role="tab" data-bs-toggle="tab">Tab 25</a>
+            </nav>
+        </div>
+        <div class="tab-content p-3" id="myTabContent2">
+            <div role="tabpanel" class="tab-pane fade active show mt-2" id="tab17" aria-labelledby="public-tab">
+                This is the content of Tab 17...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab18" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 18...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab19" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 19...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab20" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 20...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab21" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 21...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab22" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 22...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab23" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 23...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab24" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 24...
+            </div>
+            <div class="tab-pane fade mt-2" id="tab25" role="tabpanel" aria-labelledby="group-dropdown2-tab">
+                This is the content of Tab 25...
+            </div>
+        </div>
+    </div>
+
     <script src="../node_modules/move-js/move.js"></script>
-    <link href="../dist/scrollable-tabs.min.css" rel="stylesheet">
-    <script src="../dist/scrollable-tabs.min.js"></script>
+    <link href="../dist/scrollable-tabs.css" rel="stylesheet">
+    <script src="../dist/scrollable-tabs.js"></script>
 </body>
+
 </html>
