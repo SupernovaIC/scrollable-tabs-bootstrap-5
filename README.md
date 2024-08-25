@@ -40,7 +40,7 @@ To allow more than one set of tabs, it required to add a new class to wrap the t
 ### HTML example:
 
 ```html
-<div class="w-100">
+<div class="tab-wrapper w-100">
     <div class="scroller scroller-left float-start mt-2"><i class="bi bi-caret-left-fill"></i></div>
     <div class="scroller scroller-right float-end mt-2"><i class="bi bi-caret-right-fill"></i></div>
     <div class="wrapper-nav">

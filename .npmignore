@@ -5,3 +5,5 @@ README.md
 example/index_b4.html
 .gitignore
 node_modules/
+dist/scrollable-tabs.css
+dist/scrollable-tabs.js
