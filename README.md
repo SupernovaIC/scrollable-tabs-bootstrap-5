@@ -20,7 +20,9 @@ To allow more than one set of tabs, it required to add a new class to wrap the t
 
 - Install with [npm](https://www.npmjs.com/): `npm i scrolling-tabs-bootstrap-5`
 
-[![npm version](https://img.shields.io/npm/v/scrolling-tabs-bootstrap-5)](https://www.npmjs.com/package/scrolling-tabs-bootstrap-5)
+|Latest Release|Downloads|
+|:------------:|:------------:|
+|[![npm version](https://img.shields.io/npm/v/scrolling-tabs-bootstrap-5)](https://www.npmjs.com/package/scrolling-tabs-bootstrap-5)|[![NuGet Badge SpotsDialog.Xamarin](https://img.shields.io/npm/dt/scrolling-tabs-bootstrap-5)](https://www.npmjs.com/package/scrolling-tabs-bootstrap-5/)|
 
 ### Required libraries:
 
