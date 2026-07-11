@@ -6,7 +6,14 @@ A simple plugin to create scrollable tabs with Bootstrap 5.
 
 ## Support me:
 
-[![sponsor me][2]](https://www.buymeacoffee.com/fanmixco)
+<p align="center">
+  <a href="https://buymeacoffee.com/fanmixco">
+    <img src="https://raw.githubusercontent.com/FANMixco/Xamarin-SearchBar/master/bmc-rezr5vpd.gif" alt="Buy Me a Coffee" height="65">
+  </a>
+  <a href="https://github.com/sponsors/FANMixco">
+    <img src="https://raw.githubusercontent.com/FANMixco/Xamarin-SearchBar/88396224b2df8f77969e03746fa964225aa9bc9d/github-sponsors-button-cropped.svg" alt="GitHub Sponsors" height="65">
+  </a>
+</p>
 
 ## Usage:
 
